@@ -1,0 +1,14 @@
+.cache
+public
+.idea
+.vscode
+.DS_Store
+node_modules
+*.toml
+results
+.github
+LICENSE
+*.txt
+**/static/**
+**/*.hbs
+coverage
