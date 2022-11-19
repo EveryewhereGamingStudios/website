@@ -12,7 +12,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^3.1.0"
   },
   "scripts": {
     "dev": "cross-env BROWSER=none react-scripts start",
