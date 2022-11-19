@@ -1,29 +1,29 @@
-import "./App.css";
-import logo from "./imgs/logo.png";
-import everywhere from "./imgs/everywhere.png";
-import partners from "./imgs/partners.png";
-import background from "./imgs/background.png";
-import moralis from "./imgs/moralis.png";
-import unity from "./imgs/unity.png";
-import map from "./imgs/map.png";
-import galaxy from "./imgs/galaxy.png";
+import './App.css';
+import logo from './imgs/logo.png';
+import everywhere from './imgs/everywhere.png';
+import partners from './imgs/partners.png';
+import background from './imgs/background.png';
+import moralis from './imgs/moralis.png';
+import unity from './imgs/unity.png';
+import map from './imgs/map.png';
+import galaxy from './imgs/galaxy.png';
 
 function App() {
   const icons = [
     {
-      class: "fa-brands fa-twitter",
+      class: 'fa-brands fa-twitter',
     },
     {
-      class: "fa-brands fa-telegram",
+      class: 'fa-brands fa-telegram',
     },
     {
-      class: "fa-brands fa-instagram",
+      class: 'fa-brands fa-instagram',
     },
     {
-      class: "fa-brands fa-medium",
+      class: 'fa-brands fa-medium',
     },
     {
-      class: "fa-brands fa-youtube",
+      class: 'fa-brands fa-youtube',
     },
   ];
   return (
@@ -32,9 +32,9 @@ function App() {
       <header>
         <div
           style={{
-            display: "flex",
-            gap: "1.5rem",
-            alignItems: "center",
+            display: 'flex',
+            gap: '1.5rem',
+            alignItems: 'center',
           }}
         >
           <img src={logo} id="logo" alt="cosmic-logo" />
@@ -44,35 +44,36 @@ function App() {
           <h2 className="shy">WHITEPAPER</h2>
           <h2 className="shy">COSMIC DECK</h2>
         </div>
-        <button className="secondary">
-          <i className="fa-brands fa-discord"></i>Discord
+        <button className="secondary" type="button">
+          <i className="fa-brands fa-discord" />
+          Discord
         </button>
       </header>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "  34.81rem",
-            gap: "4rem",
-            marginTop: "1.5rem",
-            marginBottom: "3rem",
+            display: 'flex',
+            flexDirection: 'column',
+            width: '  34.81rem',
+            gap: '4rem',
+            marginTop: '1.5rem',
+            marginBottom: '3rem',
           }}
           className="content"
         >
           <div
             style={{
-              display: "flex",
-              gap: "1.5rem",
-              alignItems: "center",
+              display: 'flex',
+              gap: '1.5rem',
+              alignItems: 'center',
             }}
           >
             <p>OUR PARTNERS</p>
-            <img src={partners} alt="partners" style={{ width: "8rem" }} />
+            <img src={partners} alt="partners" style={{ width: '8rem' }} />
           </div>
           <h1>An immersive strategy gamefi experience</h1>
-          <button className="orange-CTA">
-            Download the game <i class="fa-brands fa-windows"></i>{" "}
+          <button className="orange-CTA" type="button">
+            Download the game <i className="fa-brands fa-windows" />{' '}
           </button>
         </div>
         <img src={galaxy} id="galaxy" alt="galaxy" />
@@ -81,19 +82,19 @@ function App() {
       <footer>
         <div
           style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
           <img src={everywhere} alt="eveywhere" />
 
           <div
             style={{
-              display: "flex",
-              gap: "1.5rem",
-              alignItems: "center",
+              display: 'flex',
+              gap: '1.5rem',
+              alignItems: 'center',
             }}
           >
             <h2 className="shy">About us</h2>
@@ -103,14 +104,14 @@ function App() {
         </div>
         <div
           style={{
-            marginTop: "2rem",
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            marginTop: '2rem',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
-          <p style={{ textAlign: "start" }}>
+          <p style={{ textAlign: 'start' }}>
             ©2022 | Cosmic Exodus - All right reserved
             <br />
             Privacy Policy
@@ -118,20 +119,20 @@ function App() {
 
           <div
             style={{
-              display: "flex",
-              gap: "1.5rem",
-              alignItems: "center",
+              display: 'flex',
+              gap: '1.5rem',
+              alignItems: 'center',
             }}
           >
-            {icons.map((icon, index) => (
-              <i key={`social-${index}`} className={`${icon.class} social`}></i>
+            {icons.map((icon) => (
+              <i key={`${icon.class}-social`} className={`${icon.class} social`} />
             ))}
           </div>
           <div
             style={{
-              display: "flex",
-              gap: "1.5rem",
-              alignItems: "center",
+              display: 'flex',
+              gap: '1.5rem',
+              alignItems: 'center',
             }}
           >
             <p>Powered by</p>
