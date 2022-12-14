@@ -1,9 +1,6 @@
-name: Build website
+name: Unit Testing
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - "*"
@@ -13,11 +10,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-website:
+  unit-testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
-      - name: Build site 🔨
-        run: yarn build
+      - name: Run tests
+        run: yarn test

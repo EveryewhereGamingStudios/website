@@ -1,34 +1,39 @@
 {
   "name": "website",
-  "description": "EverywhereGamingStudios Website",
-  "version": "0.4.0",
+  "description": "Source code of EverywhereGamingStudios website",
+  "version": "0.0.1",
   "private": true,
-  "author": "Everywhere Gaming Studios",
+  "author": "Everywhere Gaming Studios < geraleverywhere@gmail.com >",
+  "license": "GPLv3",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "web-vitals": "^3.1.0"
+    "styled-components": "^5.3.6"
   },
   "scripts": {
-    "dev": "cross-env BROWSER=none react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .js",
-    "lint:fix": "yarn lint --fix",
-    "format": "prettier \"**/*.{json,yaml}\" --write",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {}
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 80
   },
   "browserslist": {
     "production": [
@@ -43,15 +48,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.20.2",
-    "@babel/eslint-parser": "^7.19.1",
-    "@babel/preset-react": "^7.18.6",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.28.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
     "prettier": "^2.8.0"
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }

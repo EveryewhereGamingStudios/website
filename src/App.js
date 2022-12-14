@@ -54,7 +54,11 @@ function App() {
           <h2 className="shy">WHITEPAPER</h2>
           <h2 className="shy">COSMIC DECK</h2>
         </div>
-        <button className="secondary" type="button" onClick={() => openInNewTab('https://discord.gg/36AdSFvSX5')}>
+        <button
+          className="secondary"
+          type="button"
+          onClick={() => openInNewTab('https://discord.gg/36AdSFvSX5')}
+        >
           <i className="fa-brands fa-discord" />
           Discord
         </button>
@@ -139,7 +143,11 @@ function App() {
                 type="button"
                 key={`${social.class}-social-button`}
                 onClick={() => openInNewTab(social.url)}
-                style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}
+                style={{
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  padding: 0,
+                }}
               >
                 <i className={`${social.class} social`} />
               </button>
