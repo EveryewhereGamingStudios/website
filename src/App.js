@@ -9,23 +9,33 @@ import map from './imgs/map.png';
 import galaxy from './imgs/galaxy.png';
 
 function App() {
-  const icons = [
+  const socials = [
     {
       class: 'fa-brands fa-twitter',
+      url: 'https://twitter.com/Cosmic_Exodus',
     },
     {
       class: 'fa-brands fa-telegram',
+      url: 'https://t.me/Cosmic_Exodus',
     },
     {
       class: 'fa-brands fa-instagram',
+      url: 'https://www.instagram.com/cosmic_exodus/',
     },
     {
       class: 'fa-brands fa-medium',
+      url: 'https://medium.com/@Cosmic_exodus',
     },
     {
       class: 'fa-brands fa-youtube',
+      url: 'https://www.youtube.com/@cosmicexodus/',
     },
   ];
+
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="App">
       <img alt="background" id="background" src={background} />
@@ -44,7 +54,7 @@ function App() {
           <h2 className="shy">WHITEPAPER</h2>
           <h2 className="shy">COSMIC DECK</h2>
         </div>
-        <button className="secondary" type="button">
+        <button className="secondary" type="button" onClick={() => openInNewTab('https://discord.gg/36AdSFvSX5')}>
           <i className="fa-brands fa-discord" />
           Discord
         </button>
@@ -124,8 +134,15 @@ function App() {
               alignItems: 'center',
             }}
           >
-            {icons.map((icon) => (
-              <i key={`${icon.class}-social`} className={`${icon.class} social`} />
+            {socials.map((social) => (
+              <button
+                type="button"
+                key={`${social.class}-social-button`}
+                onClick={() => openInNewTab(social.url)}
+                style={{ backgroundColor: 'transparent', border: 'none', padding: 0 }}
+              >
+                <i className={`${social.class} social`} />
+              </button>
             ))}
           </div>
           <div

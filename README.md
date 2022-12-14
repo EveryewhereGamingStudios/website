@@ -12,8 +12,6 @@ A source of reliable, high-quality services and immersive experiences.
 2. Run the development server with `yarn dev` command;
 3. Open [http://localhost:3000](http://localhost:3000) on your browser to see live changes.
 
-Dependencies: `cross-env`, `eslint`, `eslint-plugin-react`, `eslint-config-prettier`, `eslint-plugin-prettier`, `prettier`, `eslint-config-airbnb`, `@babel/core`, `@babel/eslint-parser`, `@babel/preset-react` (Development);
-
 ## Deployment
 
 Deployed by [Vercel](https://vercel.com/), available at [everywheregamingstudios-website.vercel.app](https://everywheregamingstudios-website.vercel.app/).
