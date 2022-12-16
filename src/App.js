@@ -1,5 +1,5 @@
 import './App.css';
-import logo from './imgs/logo.png';
+import logoWhite from './imgs/logo-white.svg';
 import everywhere from './imgs/everywhere.png';
 import partners from './imgs/partners.png';
 import background from './imgs/background.png';
@@ -47,7 +47,7 @@ function App() {
             alignItems: 'center',
           }}
         >
-          <img src={logo} id="logo" alt="cosmic-logo" />
+          <img src={logoWhite} id="logo" alt="cosmic-logo" />
           <h2 className="shy">HOME</h2>
           <h2 className="shy">GAMEPLAY</h2>
           <h2 className="shy">WAITLIST</h2>
@@ -63,7 +63,13 @@ function App() {
           Discord
         </button>
       </header>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          height: '62vh', // <-- this is the magic
+        }}
+      >
         <div
           style={{
             display: 'flex',
@@ -86,9 +92,9 @@ function App() {
             <img src={partners} alt="partners" style={{ width: '8rem' }} />
           </div>
           <h1>An immersive strategy gamefi experience</h1>
-          <button className="orange-CTA" type="button">
+          {/* <button className="orange-CTA" type="button">
             Download the game <i className="fa-brands fa-windows" />{' '}
-          </button>
+          </button> */}
         </div>
         <img src={galaxy} id="galaxy" alt="galaxy" />
         <img src={map} id="map" alt="map" />
@@ -103,7 +109,6 @@ function App() {
           }}
         >
           <img src={everywhere} alt="eveywhere" />
-
           <div
             style={{
               display: 'flex',
@@ -130,7 +135,6 @@ function App() {
             <br />
             Privacy Policy
           </p>
-
           <div
             style={{
               display: 'flex',
