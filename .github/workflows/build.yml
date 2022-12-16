@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request_target:
+  pull_request:
     branches:
       - "*"
 
@@ -28,10 +28,3 @@ jobs:
         uses: ./.github/actions/yarn-install
       - name: Build site 🔨
         run: yarn build
-      - name: Deploying preview to Netlify
-        uses: netlify/actions/cli@master
-        with:
-          args: deploy --dir=build
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
