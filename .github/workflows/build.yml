@@ -28,3 +28,29 @@ jobs:
         uses: ./.github/actions/yarn-install
       - name: Build site 🔨
         run: yarn build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          name: public
+          path: build-website
+  deploy-staging:
+    needs:
+      - build-website
+    if: success() && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: public
+          path: build-website
+      - name: Deploying website to Netlify 🚀
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=build-website
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
