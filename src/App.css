@@ -7,10 +7,25 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  background: linear-gradient(
+    180deg,
+    #1a005b 0.48%,
+    #2c0d76 20.88%,
+    #381098 40.94%,
+    #4923a6 61.39%,
+    #4923a6 80.19%,
+    #16215b 100%
+  );
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: white;
+  width: 100%;
+  height: 100vh;
 }
 
 .App-header {
@@ -28,11 +43,97 @@
   color: #61dafb;
 }
 
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  animation: scale 3.4s ease-in-out alternate-reverse infinite;
+}
+
+#map {
+  width: 65rem;
+  border-radius: 50%;
+  animation: rotation1 10s ease-in-out alternate-reverse infinite,
+  scale2 20s ease-in-out alternate-reverse infinite;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  background-size: contain;
+  z-index: -1;
+}
+
+#logo {
+  width: 12.625rem;
+  margin-right: 1rem;
+}
+
+#map::before {
+  border: 1.6rem solid #91feed;
+  border: 10px solid red;
+}
+
+#galaxy {
+  width: 70m;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  background-size: contain;
+  z-index: -1;
+  mix-blend-mode: lighten;
+  animation: rotation 10s ease-in-out alternate-reverse infinite;
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scale2 {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes rotation1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-10deg);
   }
 }
