@@ -62,7 +62,7 @@ jobs:
         uses: ./.github/actions/yarn-install
       - name: Install Playwright
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: yarn create playwright install --with-deps
+        run: npx playwright install chromium --with-deps
       - name: Build website
         run: yarn build
       - name: Run Playwright 🧪
