@@ -42,5 +42,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         uses: ./.github/actions/yarn-install
-      # - name: Run Playwright 🧪
-      #   run: yarn e2e:build
+      - name: Run Playwright 🧪
+        run: yarn e2e:build

@@ -21,6 +21,11 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "playwright": "cross-env IS_PLAYWRIGHT=y playwright test",
+    "playwright:debug": "cross-env IS_PLAYWRIGHT=y playwright test --debug",
+    "playwright:init": "playwright install chromium && playwright install firefox && playwright install webkit",
+    "e2e:develop": "yarn playwright:debug",
+    "e2e:build": "cross-env IS_BUILD=y yarn playwright",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,6 +55,8 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.29.1",
+    "cross-env": "^7.0.3",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.0"
