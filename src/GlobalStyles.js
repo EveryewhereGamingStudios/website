@@ -37,8 +37,6 @@ const GlobalStyles = createGlobalStyle`
       monospace;
   }
 
-
-
   .content {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -46,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
 
   .orange-CTA {
     width: 100%;
-    height: 6.25rem;
+    height: 4.5rem;
     background: linear-gradient(180deg, #f9cb2a -25%, #f26929 67.45%);
     box-shadow: 0rem 0.5rem 0rem #a60a00, 0rem 0.5rem 0.625rem #16215b,
       0rem 0.75rem 1.5rem rgba(22, 33, 91, 0.6),
@@ -59,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Saira";
     font-style: normal;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3.5625rem;
     text-align: center;
     color: white;
