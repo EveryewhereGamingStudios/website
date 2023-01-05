@@ -6,7 +6,8 @@ import './App.css';
 import theme from './theme';
 import logoWhite from './imgs/logo-white.svg';
 import everywhere from './imgs/everywhere.png';
-import partners from './imgs/partners.png';
+import partnersEverywhere from './imgs/partners-everywhere.png';
+import partnersYay from './imgs/partners-yay.png';
 import background from './imgs/background.png';
 import moralis from './imgs/moralis.png';
 import unity from './imgs/unity.png';
@@ -106,7 +107,6 @@ function App() {
                 width: '  34.81rem',
                 gap: '4rem',
                 marginTop: '1.5rem',
-                marginBottom: '3rem',
               }}
               className="content"
             >
@@ -119,12 +119,25 @@ function App() {
                 }}
               >
                 <Typography>OUR PARTNERS</Typography>
-                <img src={partners} alt="partners" style={{ width: '8rem' }} />
+                <a href="https://linktr.ee/_Everywhereteam">
+                  <img
+                    src={partnersEverywhere}
+                    alt="partners-Everywhere"
+                    style={{ width: '3rem' }}
+                  />
+                </a>
+                <a href="https://www.yay.games/">
+                  <img
+                    src={partnersYay}
+                    alt="partners-Yay"
+                    style={{ width: '3rem' }}
+                  />
+                </a>
               </div>
               <h1>An immersive strategy gamefi experience</h1>
               {/* <button className="orange-CTA" type="button">
-            Download the game <i className="fa-brands fa-windows" />{' '}
-          </button> */}
+                Download the game <i className="fa-brands fa-windows" />{' '}
+              </button> */}
             </div>
             <img src={galaxy} id="galaxy" alt="galaxy" />
             <img src={map} id="map" alt="map" />
